@@ -12,7 +12,7 @@ default: &default
 
 development:
   <<: *default
-  database: toy_app_development
+  database: sample_app_development
   username: user1
   password: 123
   host: localhost
@@ -22,7 +22,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: toy_app_test
+  database: sample_app_test
   username: user1
   password: 123
   host: localhost

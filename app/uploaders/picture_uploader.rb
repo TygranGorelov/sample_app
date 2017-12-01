@@ -1,5 +1,6 @@
-class PictureUploader < CarrierWave::Uploader::Base
+# frozen_string_literal: true
 
+class PictureUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
@@ -10,7 +11,6 @@ class PictureUploader < CarrierWave::Uploader::Base
   else
     storage :file
   end
-
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -24,7 +24,7 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   # Add a white list of extensions which are allowed to be uploaded.
   def extension_white_list
-    %w(jpg jpeg gif png)
+    %w[jpg jpeg gif png]
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -58,5 +58,4 @@ class PictureUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-
 end
